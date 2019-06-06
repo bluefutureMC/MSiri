@@ -1,0 +1,6 @@
+name: MSiri
+description: A new way to let your players world control
+version: 0.1
+api-version: 1.14
+main: com.command.il.siri.Siri
+commands:
