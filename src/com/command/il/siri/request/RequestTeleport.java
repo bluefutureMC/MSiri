@@ -1,5 +1,7 @@
 package com.command.il.siri.request;
 
+import java.util.ArrayList;
+
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
@@ -45,7 +47,50 @@ public class RequestTeleport implements ISiriRequest {
 			
 		} else {
 			
+			Player[] telis = extractTeleporties(msg, player);
 			
+			if( telis != null && telis.length > 1 ) {
+				
+				for( int i = 0 ; i<telis.length-1 ; i++ ) {
+					
+					telis[i].teleport(telis[telis.length-1]);
+					
+				}
+				
+				if( telis.length == 2 ) {
+					
+					Siri.sendSiriMessage(player, "Teleported " + telis[0] + " to " + telis[1]);
+					
+				} else {
+					
+					String sendMsg = "Teleported ";
+					
+					for( int i = 0 ; i<telis.length-2 ; i++ ) {
+						
+						if( i == telis.length-3 ) {
+							
+							sendMsg += telis[i].getName();
+							
+						} else {
+							
+							sendMsg += telis[i].getName() + ", ";
+							
+						}
+						
+					}
+					
+					sendMsg += " and " + telis[telis.length-2] + " to " + telis[telis.length-1];
+					
+					Siri.sendSiriMessage(player, sendMsg);
+					
+				}
+				
+			} else {
+				
+				Siri.sendSiriErrorMessage(player);
+				return;
+				
+			}
 			
 		}
 		
@@ -67,4 +112,40 @@ public class RequestTeleport implements ISiriRequest {
 		return "msiri.request.teleport";
 	}
 
+	private Player[] extractTeleporties(String msg, Player player) {		
+		
+		ArrayList<Player> telis = new ArrayList<>();
+		
+		String[] words = msg.split(" ");
+		
+		for( int i = 0 ; i<words.length ; i++ ) {
+			
+			if( words[i].equalsIgnoreCase("me") || words[i].equalsIgnoreCase("i") ) {
+				
+				telis.add(player);
+				
+			} else {
+				
+				Player pp = pl.getServer().getPlayer(words[i]);
+				
+				if( pp != null ) telis.add(pp);
+				
+			}
+			
+		}
+		
+		if( telis.isEmpty() ) return null;
+		
+		Player[] telisArray = new Player[telis.size()];
+		
+		for( int i = 0 ; i<telis.size() ; i++ ) {
+			
+			telisArray[i] = telis.get(i);
+			
+		}
+		
+		return telisArray;
+		
+	}
+	
 }

@@ -19,6 +19,7 @@ import com.command.il.siri.request.RequestList;
 import com.command.il.siri.request.RequestLocation;
 import com.command.il.siri.request.RequestPlaceBlock;
 import com.command.il.siri.request.RequestSummon;
+import com.command.il.siri.request.RequestTeleport;
 
 public class Siri extends JavaPlugin {
 	
@@ -58,7 +59,7 @@ public class Siri extends JavaPlugin {
 		rh.registerRequest(new RequestKill(this));
 		rh.registerRequest(new RequestGiveItem());
 		rh.registerRequest(new RequestCreatorInfo());
-		rh.registerRequest(new RequestGetTime());
+		rh.registerRequest(new RequestGetTime(this));
 		rh.registerRequest(new RequestSummon());
 		rh.registerRequest(new RequestChangeWeather());
 		rh.registerRequest(new RequestLocation());
@@ -68,6 +69,7 @@ public class Siri extends JavaPlugin {
 		rh.registerRequest(new RequestHeal(this));
 		rh.registerRequest(new RequestFeed(this));
 		rh.registerRequest(new RequestChangeGamemode(this));
+		rh.registerRequest(new RequestTeleport(this));
 		
 	}
 	

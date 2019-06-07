@@ -54,7 +54,7 @@ public class SiriUtil {
 		
 		for( int i = 0 ; i<words.length ; i++ ) {
 			
-			if( i + 3 >= words.length ) break;
+			if( i + 2 >= words.length ) break;
 			
 			pos = new int[3];
 			

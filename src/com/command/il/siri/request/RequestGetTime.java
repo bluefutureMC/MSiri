@@ -7,16 +7,26 @@ import java.util.Date;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 
+import com.command.il.siri.HttpManager;
 import com.command.il.siri.Siri;
 
 public class RequestGetTime implements ISiriRequest {
-
+	
+	Siri pl;
+	
+	public RequestGetTime(Siri pl) {
+		this.pl = pl;
+	}
+	
 	@Override
 	public void activate(Player player, String msg) {
 		
 		if( msg.contains("real world") || msg.contains("irl") ) {
 			
-			Siri.sendSiriMessage(player, "The current Real World Time is " + getCurrentSystemTime());
+			String ip = player.getAddress().toString().replace("/", "").split(":")[0];
+			pl.debug("Player IP: " + ip);
+			Siri.sendSiriMessage(player, "Please wait...");
+			Siri.sendSiriMessage(player, "The current Real World Time is " + HttpManager.getTimeByIP(ip));
 			
 		} else {
 			
@@ -51,6 +61,7 @@ public class RequestGetTime implements ISiriRequest {
 		
 	}
 	
+	/*
 	private String getCurrentSystemTime() {
 		
 		Date date = new Date();
@@ -60,7 +71,8 @@ public class RequestGetTime implements ISiriRequest {
 		return dateFormat.format(date);
 		
 	}
-
+	*/
+	
 	@Override
 	public String getDescription() {
 		return "Show the time";
