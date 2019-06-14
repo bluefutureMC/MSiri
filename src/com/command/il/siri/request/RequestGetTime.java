@@ -1,9 +1,5 @@
 package com.command.il.siri.request;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 
@@ -24,7 +20,7 @@ public class RequestGetTime implements ISiriRequest {
 		if( msg.contains("real world") || msg.contains("irl") ) {
 			
 			String ip = player.getAddress().toString().replace("/", "").split(":")[0];
-			pl.debug("Player IP: " + ip);
+			pl.debug("http://worldtimeapi.org/api/ip/" + ip);
 			Siri.sendSiriMessage(player, "Please wait...");
 			Siri.sendSiriMessage(player, "The current Real World Time is " + HttpManager.getTimeByIP(ip));
 			
