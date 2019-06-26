@@ -11,9 +11,14 @@ import org.json.simple.parser.ParseException;
 
 public class HttpManager {
 	
+	private static final String[] INTERNAL_IP_DEFINERS = {"10.", "192.168.", "127.", "169.254."};
+	
 	public static String getTimeByIP(String ip) {
 		
-		String dateTime = sendRequest("http://worldtimeapi.org/api/ip/" + ip, "datetime");
+		String dateTime;
+		
+		if( isInternal(ip) ) dateTime = sendRequest("http://worldtimeapi.org/api/ip/", "datetime");
+		else dateTime = sendRequest("http://worldtimeapi.org/api/ip/" + ip, "datetime");
 		
 		if( dateTime != null ) {
 			
@@ -23,6 +28,20 @@ public class HttpManager {
 			return parts[0] + ":" + parts[1];
 			
 		} else return null;
+		
+	}
+	
+	private static boolean isInternal(String ip) {
+		
+		for( int i = 0 ; i<INTERNAL_IP_DEFINERS.length ; i++ ) {
+			
+			if( ip.startsWith(INTERNAL_IP_DEFINERS[i]) ) {
+				return true;
+			}
+			
+		}
+		
+		return false;
 		
 	}
 	

@@ -2,6 +2,7 @@ package com.command.il.siri;
 
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.potion.PotionEffectType;
 
 public class SiriUtil {
 	
@@ -153,5 +154,10 @@ public class SiriUtil {
 		return dim;
 		
 	}
+	
+/*	public static PotionEffectType extractPotionEffect(String msg) {
+		
+		
+	}*/
 	
 }

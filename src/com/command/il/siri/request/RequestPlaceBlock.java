@@ -5,17 +5,16 @@ import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
-import com.command.il.siri.IDDictionary;
 import com.command.il.siri.Siri;
 import com.command.il.siri.SiriUtil;
 
 public class RequestPlaceBlock implements ISiriRequest {
 	
-	private IDDictionary dict;
+/*	private IDDictionary dict;
 	
 	public RequestPlaceBlock() {
 		dict = new IDDictionary();
-	}
+	}*/
 	
 	@Override
 	public void activate(Player player, String msg) {
