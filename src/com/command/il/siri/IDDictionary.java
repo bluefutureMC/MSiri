@@ -118,6 +118,8 @@ public class IDDictionary {
 		String[] rawSalmon = {"raw salmon", "salmon"};
 		String[] suspiciousStew = {"suspicious stew", "suspicious soup"};
 		String[] sweetBerries = {"sweet berries", "berries"};
+		String[] driedKelp = {"dried kelp"};
+		String[] tropicalFish = {"tropical fish"};
 		
 		enumNameMap.put(enchantedGoldenApple, "enchanted_golden_apple");
 		enumNameMap.put(goldenApple, "golden_apple");
@@ -149,6 +151,107 @@ public class IDDictionary {
 		enumNameMap.put(rawSalmon, "salmon");
 		enumNameMap.put(suspiciousStew, "suspicious_stew");
 		enumNameMap.put(sweetBerries, "sweet_berries");
+		enumNameMap.put(driedKelp, "dried_kelp");
+		enumNameMap.put(tropicalFish, "tropical_fish");
+		
+		// Raw Materials
+		
+		String[] blazeRod = {"blaze rod"};
+		String[] cocoaBeans = {"cocoa bean"};
+		String[] enderPearl = {"ender pearl"};
+		String[] spiderEyes = {"spider eye"};
+		String[] ghastTear = {"ghast tear"};
+		String[] glowstoneDust = {"glowstone dust"};
+		String[] goldIngot = {"gold"};
+		String[] goldNugget = {"gold nugget"};
+		String[] inkSac = {"ink sac", "squid ink", "squid sac", "ink"};
+		String[] ironIngot = {"iron"};
+		String[] ironNugget = {"iron nugget"};
+		String[] lapisLazuli = {"lapis"};
+		String[] magmaCream = {"magma cream"};
+		String[] prismarineCrystal = {"prismarine"};
+		String[] prismarineShard = {"prismarine shard"};
+		String[] rabbitFoot = {"rabbit foot", "rabbit's foot", "rabbits foot"};
+		String[] rabbitHide = {"rabbit hide"};
+		String[] beetrootSeeds = {"beetroot seed"};
+		String[] netherWart = {"nether wart"};
+		String[] pumpkinSeeds = {"pumpkin seed"};
+		String[] wheatSeeds = {"wheat seed"};
+		String[] netherStar = {"nether star"};
+		String[] shulkerShell = {"shulker shell"};
+		String[] nautilusShell = {"nautilus shell"};
+		String[] phantomMembrane = {"phantom membrane"};
+		String[] heartOfTheSea = {"heart of the sea", "sea heart"};
+		
+		enumNameMap.put(blazeRod, "blaze_rod");
+		enumNameMap.put(cocoaBeans, "cocoa_beans");
+		enumNameMap.put(enderPearl, "ender_pearl");
+		enumNameMap.put(spiderEyes, "spider_eyes");
+		enumNameMap.put(ghastTear, "ghast_tear");
+		enumNameMap.put(glowstoneDust, "glowstone_dust");
+		enumNameMap.put(goldNugget, "gold_nugget");
+		enumNameMap.put(ironNugget, "iron_nugget");
+		enumNameMap.put(goldIngot, "gold_ingot");
+		enumNameMap.put(ironIngot, "iron_ingot");
+		enumNameMap.put(inkSac, "ink_sac");
+		enumNameMap.put(lapisLazuli, "lapis_lazuli");
+		enumNameMap.put(magmaCream, "magma_cream");
+		enumNameMap.put(prismarineShard, "prismarine_shard");
+		enumNameMap.put(prismarineCrystal, "prismarine_crystal");
+		enumNameMap.put(rabbitFoot, "rabbit_foot");
+		enumNameMap.put(rabbitHide, "rabbit_hide");
+		enumNameMap.put(beetrootSeeds, "beetroot_seeds");
+		enumNameMap.put(netherWart, "nether_wart");
+		enumNameMap.put(pumpkinSeeds, "pumpkin_seeds");
+		enumNameMap.put(wheatSeeds, "wheat_seeds");
+		enumNameMap.put(netherStar, "nether_star");
+		enumNameMap.put(shulkerShell, "shulker shell");
+		enumNameMap.put(nautilusShell, "nautilus_shell");
+		enumNameMap.put(phantomMembrane, "phantom_membrane");
+		enumNameMap.put(heartOfTheSea, "heart_of_the_sea");
+		
+		// Manufacture
+		
+		String[] nameTag = {"name tag"};
+		String[] blazePowder = {"blaze powder"};
+		String[] boneMeal = {"bone meal", "fertilizer"};
+		String[] bookAndQuill = {"book and quill"};
+		String[] eyeOfEnder = {"ender eye", "eye of ender"};
+		String[] fermentedSpiderEye = {"fermented spider eye"};
+		String[] glisteringMelon = {"glistering melon"};
+		String[] netherBrick = {"nether brick"};
+		String[] poppedChorusFruit = {"popped chorus"};
+		
+		enumNameMap.put(nameTag, "nametag");
+		enumNameMap.put(blazePowder, "blaze_powder");
+		enumNameMap.put(boneMeal, "bone_meal");
+		enumNameMap.put(bookAndQuill, "bookAndQuill");
+		enumNameMap.put(eyeOfEnder, "ender_eye");
+		enumNameMap.put(fermentedSpiderEye, "fermented_spider_eye");
+		enumNameMap.put(glisteringMelon, "glistering_melon");
+		enumNameMap.put(netherBrick, "nether_brick");
+		enumNameMap.put(poppedChorusFruit, "popped_chorus_fruit");
+		
+		// Dyes
+		
+		String[] roseRed = {"rose red", "red dye"};
+		String[] pinkDye = {"pink dye"};
+		String[] orangeDye = {"orange dye"};
+		String[] dandelionYellow = {"dendelion yellow", "yellow dye"};
+		String[] cactusGreen = {"cactus green", "green dye"};
+		String[] limeDye = {"lime dye"};
+		String[] lightBlueDye = {"light blue dye"};
+		String[] cyanDye = {"cyan dye"};
+		String[] blueDye = {"blue dye", "lapis dye"};
+		String[] magentaDye = {"magenta dye"};
+		String[] purpleDye = {"purpleDye"};
+		String[] grayDye = {"gray dye"};
+		String[] lightGrayDye = {"light gray dye"};
+		String[] whiteDye = {"white dye", "bonemeal dye"};
+		String[] blackDye = {"black dye", "ink dye"};
+		String[] brownDye = {"brown dye"};
+		
+		
 		
 	}
 	
